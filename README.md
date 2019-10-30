@@ -16,7 +16,7 @@ Dwebdriver.chrome.driver=/Users/yana.lunts/Downloads/chromedriver
 
 Где /Users/yana.lunts/Downloads/chromedriver это путь до вебдрайвера, который лежит у вас на компьютере.
 
-2) Можно прописать путь до дравера в VM options при запуске самого теста (edit configurate -> VM options -> 
+2) Можно прописать путь до драйвера в VM options при запуске самого теста (edit configurate -> VM options -> 
 -Dwebdriver.chrome.driver=/Users/yana.lunts/Downloads/chromedriver)
 
 Где /Users/yana.lunts/Downloads/chromedriver это путь до вебдрайвера, который лежит у вас на компьютере.
