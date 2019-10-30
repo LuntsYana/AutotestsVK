@@ -9,7 +9,6 @@ import org.junit.Test;
 public class TestAddAndDeleteMarkInPost extends TestBase {
     private BookmarksPage bookmarksPage;
 
-
     @Before
     public void setUp() {
         super.setUp();

@@ -22,7 +22,7 @@ public class TestAddPodcastInBookmark extends TestBase {
         podcastPage.addPodcastsInBookmarks();
         String podcastName = podcastPage.getPodcastName();
         BookmarksPage bookmarksPage = new LeftMenuPage(driver).openBookmarks().goToPodcastsBlock();
-        Assert.assertEquals("Проверяем, что подскаст добавлен в закладки", podcastName,
+        Assert.assertEquals("Подкаст не добавлен в закладки", podcastName,
                 bookmarksPage.getNamePodcastInBookmarks());
     }
 }

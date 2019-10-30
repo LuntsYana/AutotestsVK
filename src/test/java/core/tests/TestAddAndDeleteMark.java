@@ -17,7 +17,6 @@ public class TestAddAndDeleteMark extends TestBase {
     public void setUp() {
         super.setUp();
         bookmarksPage = new LeftMenuPage(driver).openBookmarks();
-
     }
 
     /**

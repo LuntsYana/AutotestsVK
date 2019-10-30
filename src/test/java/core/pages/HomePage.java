@@ -52,7 +52,7 @@ public class HomePage extends BasePage {
      */
     public String addPostInBookmarks(String postText) {
         String postId = driver.findElement(POST).getAttribute("data-post-id");
-        Assert.assertEquals("Teкст отличается от " + postText, postText,
+        Assert.assertEquals("Текст отличается от " + postText, postText,
                 driver.findElement(POST).findElement(TEXT_POST).getText());
         WebElement actionMenu = driver.findElement(POST).findElement(ACTION_MENU);
         Actions showMenu = new Actions(driver);

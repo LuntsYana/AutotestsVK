@@ -34,7 +34,7 @@ public class TestAddPostInBookmark extends TestBase {
                 .createPost(postText);
         driver.navigate().refresh();
         String postId = new HomePage(driver).addPostInBookmarks(postText);
-        Assert.assertEquals("Проверяем, что пост добавлен", postId, bookmarksPage.getAttributeDataPostId());
+        Assert.assertEquals("Пост не добавлен", postId, bookmarksPage.getAttributeDataPostId());
     }
 }
 

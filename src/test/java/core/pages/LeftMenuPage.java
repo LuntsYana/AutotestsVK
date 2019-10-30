@@ -3,12 +3,15 @@ package core.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import java.util.logging.Logger;
+
 import static core.Constants.SITE_HOME_PAGE;
 
 /**
  * Левое меню
  */
 public class LeftMenuPage extends BasePage {
+    private static final Logger LOGGER = Logger.getLogger(LeftMenuPage.class.getName());
     private static final By BOOKMARKS = By.id("l_fav");
     private static final By MAIN_COLUMN = By.id("side_bar_inner");
     private static final By FRIENDS = By.id("l_fr");
@@ -19,7 +22,6 @@ public class LeftMenuPage extends BasePage {
         super(driver);
         waitUntilVisible(MAIN_COLUMN);
         checkMainElementIsLoaded(MAIN_COLUMN);
-
     }
 
     /**
@@ -27,11 +29,10 @@ public class LeftMenuPage extends BasePage {
      *
      * @return boolean
      */
-    public boolean isVisibleBookmarksInLeftmenu() {
+    public boolean isVisibleBookmarksInLeftMenu() {
         waitUntilVisible(BOOKMARKS);
         return true;
     }
-
 
     /**
      * Кликает на Закладки
@@ -62,13 +63,12 @@ public class LeftMenuPage extends BasePage {
 
     public void checkBookmarksInLeftMenu() {
         try {
-            if (isVisibleBookmarksInLeftmenu()) {
+            if (isVisibleBookmarksInLeftMenu()) {
                 new HomePage(driver).goToSetting().goToMenuSetting().clickOnBookmarks();
                 driver.get(SITE_HOME_PAGE);
             }
-        }
-        //Падает если bookmarksIsDisplayed() = false, игнорируем эту ошибку и выполняем тест
-        catch (Exception ignored) {
+        } catch (Exception ignored) {
+            LOGGER.warning("Падает если bookmarksIsDisplayed() = false, игнорируем эту ошибку и выполняем тест");
         }
     }
 }

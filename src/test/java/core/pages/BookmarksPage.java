@@ -16,12 +16,12 @@ import static core.Constants.BOOKMARKS_PAGE;
 public class BookmarksPage extends BasePage {
 
     private static final By POST = By.xpath("//div[contains(@class, 'bookmarks_rows')]//div[contains(@class, 'bookmarks_row')]" +
-            "/div[contains(@class, 'post')][1]");
+            "/div[contains(@class, 'post')][1]"); // TODO В большом проекте можно сделать враппер, а пока беру первого
     private static final By CREATE_MARK_BUTTON = By.xpath("//*[@id='ui_rmenu_tags_dropdown_list']/div/button");
     private static final By INPUT_FOR_MARK = By.id("bookmark_tag_name");
     private static final By SAVE_NEW_MARK_BUTTON = By.id("save_tag_btn");
     private static final By DELETE_MARK_BUTTON = By.className("bookmarks_tag_delete_btn");
-    private static final By CONFURM_DELETE_BUTTON = By.xpath("//button[contains(@class, 'flat_button') and text()='Да']");
+    private static final By CONFIRM_DELETE_BUTTON = By.xpath("//button[contains(@class, 'flat_button') and text()='Да']");
     private static final By UI_MENU = By.xpath("//div[contains(@class, 'bookmarks_rows')]//div[@class='ui_actions_menu_icons']");
     private static final By SETTING_MARK = By.className("ui_actions_menu_item_sublist");
     private static final By READ_LATER = By.xpath(".//*[@data-tag-name = 'Прочитать позже']");
@@ -78,7 +78,7 @@ public class BookmarksPage extends BasePage {
         Actions actions = new Actions(driver);
         actions.moveToElement(mark).build().perform();
         mark.findElement(DELETE_MARK_BUTTON).click();
-        WebElement deleteButton = driver.findElement(CONFURM_DELETE_BUTTON);
+        WebElement deleteButton = driver.findElement(CONFIRM_DELETE_BUTTON);
         deleteButton.click();
         return new BookmarksPage(driver);
     }
@@ -88,7 +88,7 @@ public class BookmarksPage extends BasePage {
      */
     public void addMarkReadLaterInPost() {
         Actions builder = new Actions(driver);
-        pause(1000);
+        pause(1000); /* TODO не работает без паузы, нужно разобраться почему */
         builder.moveToElement(driver.findElement(UI_MENU))
                 .click(driver.findElement(SETTING_MARK))
                 .click(driver.findElement(READ_LATER));
@@ -140,22 +140,19 @@ public class BookmarksPage extends BasePage {
      */
     public BookmarksPage goToUsersBlock() {
         driver.findElement(USERS_BLOCK).click();
-        pause(100); /* waitUntil не помогает, нужна именно пауза,
-        иначе автотест проходит только на второй перезапуск */
+        pause(100); /* TODO Когда создам класс Сообщества, то проблема уйдет и паузу можно будет убрать */
         return new BookmarksPage(driver);
     }
 
     /**
      * Переход в блок "Группы"
-     * <p>
      * TODO сделать пэйдж "Сообщества", когда расширятся автотесты. Пока это не целесобразно, есть один метод только
      *
      * @return BookmarksPage()
      */
     public BookmarksPage goToGroupsBlock() {
         driver.findElement(GROUPS_BLOCK).click();
-        pause(100); /* waitUntil не помогает, нужна именно пауза,
-        иначе автотест проходит только на второй перезапуск */
+        pause(100); /* TODO Когда создам класс Сообщества, то проблема уйдет и паузу можно будет убрать */
         return new BookmarksPage(driver);
     }
 
@@ -191,12 +188,11 @@ public class BookmarksPage extends BasePage {
      */
     public void deleteMarkReadLaterInPost() {
         Actions builder = new Actions(driver);
-        pause(1000);
+        pause(1000); /* TODO не работает без паузы, нужно разобраться почему */
         builder.moveToElement(driver.findElement(UI_MENU))
                 .click(driver.findElement(SETTING_MARK))
                 .click(driver.findElement(READ_LATER));
         Action mouseoverAndClick = builder.build();
         mouseoverAndClick.perform();
     }
-
 }

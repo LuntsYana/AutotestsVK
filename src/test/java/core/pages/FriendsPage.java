@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
  * https://vk.com/friends
  */
 public class FriendsPage extends BasePage {
-    private static final By FRIEND = By.xpath("//*[@class='friends_list_bl']/div[1]");
+    private static final By FRIEND = By.xpath("//*[@class='friends_list_bl']/div[1]"); // TODO В большом проекте можно сделать враппер, а пока беру первый элмент
     private static final By PHOTO_FRIEND = By.className("friends_photo_wrap");
 
     public FriendsPage(WebDriver driver) {

@@ -20,9 +20,9 @@ public class TestChangeNameMark extends TestBase {
 
     @Test
     public void changeNameMark() {
-        String bookmarksPage = new BookmarksPage(driver)
+        String newName = bookmarksPage
                 .createMark(markName)
                 .changeMark(markName, newMarkName);
-        Assert.assertNotEquals("Проверяем, что сообщение изменилось", bookmarksPage);
+        Assert.assertNotEquals("Проверяем, что сообщение изменилось", newName);
     }
 }

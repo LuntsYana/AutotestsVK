@@ -29,7 +29,7 @@ public class TestCheckDisplayBookmarksInMenu extends TestBase {
                 .goToSetting()
                 .goToMenuSetting()
                 .clickOnBookmarks()
-                .isVisibleBookmarksInLeftmenu();
+                .isVisibleBookmarksInLeftMenu();
         Assert.assertTrue("Закладки не присутствуют в левой колонке", bookmarks);
     }
 }

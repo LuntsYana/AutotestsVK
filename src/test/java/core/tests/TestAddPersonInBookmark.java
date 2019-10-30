@@ -4,12 +4,15 @@ import core.pages.BookmarksPage;
 import core.pages.LeftMenuPage;
 import core.pages.UserPage;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 /**
  * Удаляем юзера из закладок
  */
 public class TestAddPersonInBookmark extends TestBase {
+
+    @Before
     public void setUp() {
         super.setUp();
         new LeftMenuPage(driver)
@@ -34,6 +37,5 @@ public class TestAddPersonInBookmark extends TestBase {
                 .goToUsersBlock();
         Assert.assertEquals("Пользователь не добавлен в закладки", userName,
                 bookmarksPage.getUserNameInBookmarks());
-
     }
 }

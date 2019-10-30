@@ -25,11 +25,10 @@ public abstract class BasePage {
         }
     }
 
-    protected void pause(int miliseconds) {
+    protected void pause(int milliseconds) {
         try {
-            Thread.sleep(miliseconds);
+            Thread.sleep(milliseconds);
         } catch (InterruptedException e) {
-            e.printStackTrace();
             throw new IllegalStateException("Ошибка при паузе", e);
         }
     }
