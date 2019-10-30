@@ -10,11 +10,11 @@ Java + Junit + Maven
 
 ### Как запустить автотесты у себя на компьютере
 
-###Запустить автотесты можно двумя способами:
+Запустить автотесты можно двумя способами:
 
 1)Запустить через командную строку, прописав путь до вебдрайвера.
 mvn start test -Dwebdriver.chrome.driver=/Users/yana.lunts/Downloads/chromedriver, где /Users/yana.lunts/Downloads/chromedriver это путь до вебдрайвера, который лежит у вас на компьютере.
 
-2) Можно прописать путь до дравера в VM options (edit cofigurate -> VM options -> -Dwebdriver.chrome.driver=/Users/yana.lunts/Downloads/chromedriver, где /Users/yana.lunts/Downloads/chromedriver это путь до вебдрайвера, который лежит у вас на компьютере.
+2)Можно прописать путь до дравера в VM options (edit cofigurate -> VM options -> -Dwebdriver.chrome.driver=/Users/yana.lunts/Downloads/chromedriver, где /Users/yana.lunts/Downloads/chromedriver это путь до вебдрайвера, который лежит у вас на компьютере.
 
 Вебдрайвер должен быть той же версии, что и хром.
