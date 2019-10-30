@@ -11,13 +11,11 @@ Java + Junit + Maven
 **Запустить автотесты можно двумя способами:**
 
 1) Запустить через командную строку, прописав путь до вебдрайвера.
-> mvn start test -  
-Dwebdriver.chrome.driver=/Users/yana.lunts/Downloads/chromedriver
+> mvn start test -Dwebdriver.chrome.driver=/Users/yana.lunts/Downloads/chromedriver
 
 Где /Users/yana.lunts/Downloads/chromedriver это путь до вебдрайвера, который лежит у вас на компьютере.
 
-2) Можно прописать путь до драйвера в VM options при запуске самого теста (edit configurate -> VM options -> 
--Dwebdriver.chrome.driver=/Users/yana.lunts/Downloads/chromedriver)
+2) Можно прописать путь до драйвера в VM options при запуске самого теста (edit configurate -> VM options -> -Dwebdriver.chrome.driver=/Users/yana.lunts/Downloads/chromedriver)
 
 Где /Users/yana.lunts/Downloads/chromedriver это путь до вебдрайвера, который лежит у вас на компьютере.
 
