@@ -1,7 +1,7 @@
 # AutotestsVK
 
 ### Description repository
-In this repository, autotests for [Bookmark section of the VKontakte site](vk.com/bookmarks) are implemented. Autotests are written taking into account critical bookmarks for check cases. The main covered functionalities are adding content (Posts, Podcasts, Users, Groups) to bookmarks, adding tags to content in bookmarks, adding new tags, as well as deleting and changing them.
+In this repository, autotests for [Bookmark section of the VKontakte site](https://vk.com/bookmarks) are implemented. Autotests are written taking into account critical bookmarks for check cases. The main covered functionalities are adding content (Posts, Podcasts, Users, Groups) to bookmarks, adding tags to content in bookmarks, adding new tags, as well as deleting and changing them.
 
 ### Stack
 Java + Junit + Maven
