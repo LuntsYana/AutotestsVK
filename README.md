@@ -1,22 +1,23 @@
 # AutotestsVK
 
-### Описание репозитория
-В данном репозитории, реализованы автотесты для [раздела Закладки сайта Вконтакте](vk.com/bookmarks). Автотесты написаны с учетом критичных для Закладок чек-кейсов. Основные покрытые функциональности - добавление контента (Посты, Подкасты, Пользователи, Группы) в закладки, добавление тэгов к контенту в закладках, добавление новых меток, а так же их удаление и изменение.
+### Description repository
+In this repository, autotests for [Bookmark section of the VKontakte site] (vk.com/bookmarks) are implemented. Autotests are written taking into account critical bookmarks for check cases. The main covered functionalities are adding content (Posts, Podcasts, Users, Groups) to bookmarks, adding tags to content in bookmarks, adding new tags, as well as deleting and changing them.
 
-### Стэк технологий
+### Stack
 Java + Junit + Maven
 
-### Как запустить автотесты у себя на компьютере
 
-**Запустить автотесты можно двумя способами:**
+### How to run autotests on your computer
 
-1) Запустить через командную строку, прописав путь до вебдрайвера.
-> mvn start test -Dwebdriver.chrome.driver=/Users/yana.lunts/Downloads/chromedriver
+** There are two ways to run autotests: **
 
-Где /Users/yana.lunts/Downloads/chromedriver это путь до вебдрайвера, который лежит у вас на компьютере.
+1) Run through the command line, setting the path to the web driver.
+> mvn start test -Dwebdriver.chrome.driver = / Users / yana.lunts / Downloads / chromedriver
 
-2) Можно прописать путь до драйвера в VM options при запуске самого теста (edit configurate -> VM options -> -Dwebdriver.chrome.driver=/Users/yana.lunts/Downloads/chromedriver)
+Where /Users/yana.lunts/Downloads/chromedriver is the path to the web driver that is on your computer.
 
-Где /Users/yana.lunts/Downloads/chromedriver это путь до вебдрайвера, который лежит у вас на компьютере.
+2) You can specify the path to the driver in VM options when starting the test itself (edit configurate -> VM options -> -Dwebdriver.chrome.driver = / Users / yana.lunts / Downloads / chromedriver)
 
-**Вебдрайвер должен быть той же версии, что и хром.**
+Where /Users/yana.lunts/Downloads/chromedriver is the path to the web driver that is on your computer.
+
+** The web driver must be the same version as the chrome. **
